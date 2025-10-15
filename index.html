@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>الرئيسية - جمعية رعاية الايتام بمحافظة حفر الباطن منصة تراؤف المعرفية</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivrn.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/all/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .bgLinear {
+            background: linear-gradient(135deg, #1e5799, #207cca);
+        }
+        
+        .Text_colorblue {
+            color: #207cca;
+        }
+        
+        .Text_colordaruk {
+            color: #333;
+        }
+        
+        .Text_colorlight {
+            color: white;
+        }
+        
+        .button {
+            background-coloror: #207cca;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .button:hover {
+            background-coloror: #1a64a8;
+            transform: translateY(-2px);
+        }
+        
+        .btn_trans {
+            background-coloror: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+        
+        .btn_trans:hover {
+            background-coloror: #fff;
+            color: #207cca;
+        }
+        
+        .trans-shadow {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .trans-shadow:hover {
+            transform: translateY(-5px);
+        }
+        
+        .article-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .slide-img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        
+        .num {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .article-img {
+            border-radius: 10px;
+            width: 100%;
+        }
+        
+        .logoBox img {
+            max-width: 200px;
+        }
+        
+        .initiativeimg {
+            max-width: 150px;
+        }
+        
+        .scroll {
+            transition: all 0.3s ease;
+        }
+        
+        .scroll:hover {
+            transform: scale(1.05);
+        }
+        
+        .serv-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .hvr-shutter {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hvr-shutter:beforebefore {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.2);
+            transform: scaleX(0);
+            transform-origin: 50% 50%;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .hvr-shutter:hover:beforebefore {
+            transform: scaleX(1);
+        }
+        
+        .active-filter {
+            background-color: #207cca;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+        
+        .filter-items li {
+            cursor: pointer;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-items li:hover {
+            background-color: #e9ecef;
+        }
+        
+        .swiper-slide {
+            text-align: center;
+        }
+        
+        .bestPic img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .bestText {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .bestText h5 {
+            margin: 15px 0;
+            color: #207cca;
+        }
+        
+        .video-playlist__list-item {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .video-playlist__list-item:hover {
+            background: #f0f8ff;
+            transform: translateX(5px);
+        }
+        
+        .video-playlist__list-item--active {
+            background: #e6f2ff;
+            border-left: 4px solid #207cca;
+        }
+        
+        .box-small-playlistimg {
+            border-radius: 5px;
+        }
+        
+        .tab-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-tabs>li>a {
+            color: #207cca;
+            border: none;
+        }
+        
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:hover {
+            background: #207cca;
+            color: white;
+            border-radius: 20px;
+        }
+        
+        .nav-tabs>li>a:hover {
+            background: #f0f8ff;
+        }
+        
+        .marg_01 {
+            margin: 10px 0;
+        }
+        
+        .marg_02 {
+            margin: 20px 0;
+        }
+        
+        .marg_03 {
+            margin: 30px 0;
+        }
+        
+        .marg_04 {
+            margin: 40px 0;
+        }
+        
+        .marg_05 {
+            margin: 50px 0;
+        }
+        
+        .padd_Top_01 {
+            padding-top: 20px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-right {
+            text-align: right;
+        }
+        
+        .pull-right {
+            float: right;
+        }
+        
+        .flex_center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .flex_center {
+                flex-direction: column;
+            }
+            .pull-right {
+                float: none;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myBtn" class="scroll top">
+        <a href="#home"><span class="fa fa-chevron-up"></span></a>
+    </div>
+
+    <header id="header">
+        <div class="topHead border bgLinear">
+            <div class="container">
+                <div class="col-sm-6 col-xs-12">
+                    <ul class="nav navbar-nav">
+                        <li class="sub-link"><i class="fas fa-envelope topIcon-right"></i> info@traof.org</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <ul class="navnavbar-nav pull-right leftnav">
+                        <li class="sub-link ">
+                            <a href="#" target="_blank" class="sub-link-a"><i class="fab fa-youtube"></i></a>
+                            <a href="#" target="_blank" class="sub-link-a"><i class="fab fa-telegram"></i></a>
+                            <a href="#" target="_blank" class="sub-link-a"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank" class="sub-link-a"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" class="sub-link-a"><i class=" fab fa-twitter"></i></a>
+                        </li>
+                        <li class="sub-link"><a href="#" class="sub-link-a"><i class="fas fa-user topIcon-right"></i> تسجيل دخول </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container marg_02 ">
+            <div class="row">
+                <div class="col-sm-2 col-xs-12 marg_01">
+                    <div class="logoBox">
+                        <a href="#"><img src="https://placehold.co/200x80/207cca/ffffff?text=تراؤف" alt="شعار تراؤف" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="col-sm-5 col-xs-12marg_01">
+                    <form class="nav__search-form">
+                        <input type="text" name="q" placeholder="البحث في منصة تراؤف" class="nav__search-input" style="width: 70%; padding: 10px;border: 1px solid #ddd;border-radius: 5px;">
+                        <button type="submit" class="search-button btn-button" style="background: #207cca;color: white;border: none;padding: 10px 15px;border-radius: 5px;marginargin-right: 10px;"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="col-sm-3 col-xs-12marg_01share">
+                    <div class="text-center">
+                        <div class="Text_Sec_1 Text_colordaruk">شارك اصدائك</div>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="btnbtn-sm" style="background: #207cca;color: white;marginargin: 0 5px;"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btnbtn-sm" style="background: #3b5998;c olor: white;marging: 0 5px;"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="btnbtn-sm" style="background: #e1306c;c olor: white;margc: 0 5px;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 initiativeative">
+                    <div class="Text_Sec_1Text_colordaruk" style="padding: 0px 0px 15px;font-size: 14px;line-height: 1.4;">إحدى مبادرات</div>
+                    <a href="#">
+                        <imgsrc="https://placehold.co/150x60/e74c3c/ffffff?text=جمعية+الأيتام" alt="جمععة رعاية الأيتام" class="img-responsive">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="topNav" class="border_all" style="background: white;box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+
+            <div class="containerflex_center">
+                <div class="navHead">
+                    <nav class="navbarnavbar-default">
+                        <div class="navbar-header">
+                            <button type="button" data-toggle="collapse" data-target="#navbar" class="navbar-togglecollapsed collapsed">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navnavbar-nav">
+                                <li class="active"><a href="#" style="color: #207cca;"><i class="fas fa-home"></i>الرئيسية</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" style="color: #207cca;">عن الجمعية<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">نبذة عن الجمعع</a></li>
+                                        <li><a href="#">رؤيتنا ورسالتنا</a></li>
+                                        <li><a href="#">مجلس الإدارة</a></li>
+                                        <li><a href="#">الهيكل التنظيمي</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" style="color: #207cca;">خدماتنا<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">الرعاية التعليمية</a></li>
+                                        <li><a href="#">الرعاية الصحيةية</a></li>
+                                        <li><a href="#">الرعايةالاجتماعية</a></li>
+                                        <li><a href="#">الدعمالنفسي</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" style="color: #207cca;">المبادرات</a></li>
+                                <li><a href="#" style="color: #207cca;">الأخباروالأحدث</a></li>
+                                <li><a href="#" style="color: #207cca;">تواصل معنا</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="app_home">
+        <section id="slider" class="bgLinearmarg_03">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="marg_02">
+                            <h1 style="font-size: 2.5em;color: white;margins: 0 0 20px 0;">منصة تراؤف المعرفية</h1>
+                            <h2 style="font-size: 1.8em;color: white;margins: 0 0 30px 0;">جمعية رعايةالأيتامبحفرالباطن</h2>
+                            <p class="Text_Sec_1Text_colorlight" style="font-size: 1.2em;margins: 0 0 30px 0;">منصة متكاملةلرعايةالأيتاموتنميةمهاراتهموتأهيلهملبناءمستقبلمشرقيساهمفيالمجتمع</p>
+                        </div>
+                        <div class="padd_Top_01">
+                            <a href="#" class="btnbutton" style="margin-right: 15px;">تعرف علىخدماتنا</a>
+                            <a href="#" class="btnbutton" style="background: white;c olor: #207cca;">تبرع الآن</a>
+                        </div>
+                    </div>
+                    <div class="col-md-5text-right">
+                        <imgsrc="https://placehold.co/500x400/207cca/ffffff?text=رعاية+الأيتام" alt="رعايةالأيتام" class="img-responsive slide-img" style="border-radius: 15px;box-shadow: 0 5px 15px rgba(0,0,0,0.2);" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service">
+            <div class="containermarg_03">
+                <div class="row">
+                    <div class="col-md-2col-sm-4col-md-offset-1">
+                        <div class="scrollservtrans-shadowtext-centermarg_04">
+                            <a href="#programs">
+                                <div><span class="icon-speaker serv-icon" style="color: #207cca;"><i class="fas fa-graduation-cap"></i></span></div>
+                                <h4>البرامجالتعليمية</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2col-sm-4">
+                        <div class="scrollservtrans-shadowtext-centermarg_04">
+                            <a href="#health">
+                                <div><span class="icon-open-book serv-icon" style="color: #207cca;"><i class="fas fa-heartbeat"></i></span></div>
+                                <h4>الرعايةالصحية</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2col-sm-4">
+                        <div class="scrollservtrans-shadowtext-centermarg_04">
+                            <a href="#social">
+                                <div><span class="icon-schedule serv-icon" style="color: #207cca;"><i class="fas fa-hands-helping"></i></span></div>
+                                <h4>الرعايةالاجتماعية</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2col-sm-4">
+                        <div class="scrollservtrans-shadowtext-centermarg_04">
+                            <a href="#psychologicalical">
+                                <div><span class="icon-paper-plane serv-icon" style="color: #207cca;"><i class="fas fa-brain"></i></span></div>
+                                <h4>الدعمالنفسي</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2col-sm-4">
+                        <div class="scrollservtrans-shadowtext-centermarg_04">
+                            <a href="#donations">
+                                <div><span class="icon-contract serv-icon" style="color: #207cca;"><i class="fas fa-hand-holding-heart"></i></span></div>
+                                <h4>التبرعات</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="articles" class="articlesmarg_03">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1 class="Text_colorblue"><strong>أخبار</strong>الجمعية</h1>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="navnavbar-navfilter-items">
+                            <li class="active-filter">الأخبار</li>
+                            <li>الفعاليات</li>
+                            <li>قصصنجاح</li>
+                            <li>التقارير</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rowmarg_02">
+                    <div class="col-md-6">
+                        <div class="article-box">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <a href="#">
+                                        <h4 class="Text_colorblue">انطلاقبرنامج"بسمةأمل"لرعايةالأيتامفيحفرالباطن</h4>
+                                    </a>
+                                    <span class="Text_Sec_1">عددالمشاهدات: 1,245</span>
+                                    <p class="marg_01">أطلقتجمععةرعايةالأيتامبمحافظةحفرالباطنبرنامج"بسمةأمل"الذييهدف...</p>
+                                    <div class="text-center">
+                                        <a href="#" class="btnbuttonmarg_01">المزيد<i i class="fas fa-angle-left"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="numbgLineartext-center">15<span>رمضان</span></div>
+                                    <a href="#">
+                                        <imgsrc="https://placehold.co/300x200/207cca/ffffff?text=بسمة+أمل" class="img-responsivearticle-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="article-box">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <a href="#">
+                                        <h4 class="Text_colorblue">توقيعشراكةمعجامعةهحفالباتنلتأهيلالأيتام</h4>
+                                    </a>
+                                    <span class="Text_Sec_1">عددالمشاهدات: 897</span>
+                                    <p class="marg_01">وقعتجمععةرعايةالأيتامبمحافظةحفرالباطنمذكرةتفاهوممعجامعةهحفالباتن...</p>
+                                    <div class="text-center">
+                                        <a href="#" class="btnbuttonmarg_01">المزيد<c i class="fas fa-angle-left"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="numbgLineartext-center">10<span>شعبان</span></div>
+                                    <a href="#">
+                                        <imgsrc="https://placehold.co/300x200/e74c3c/ffffff?text=شراكة+جامعةه" class="img-responsivearticle-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="article-box">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <a href="#">
+                                        <h4 class="Text_colorblue">قصةنجاح:أحمدمنيتيمإلىطالبجاممتميز</h4>
+                                    </a>
+                                    <span class="Text_Sec_1">عددالمشاهدات: 2,156</span>
+                                    <p class="marg_01">يرويأحمد،أحدالأيتامالذينساعدهبالجمعية،قصتهمعالتحدياتوكيفساعدته...</p>
+                                    <div class="text-center">
+                                        <a href="#" class="btnbuttonmarg_01">المزيد<c i class="fas fa-angle-left"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="numbgLineartext-center">05<span>رجب</span></div>
+                                    <a href="#">
+                                        <imgsrc="https://placehold.co/300x200/27ae60/ffffff?text=قصة+نجاح" class="img-responsivearticle-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="article-box">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <a href="#">
+                                        <h4 class="Text_colorblue">تقريرالأداءالسنويلجمععةرعايةالأيتام2024</h4>
+                                    </a>
+                                    <span class="Text_Sec_1">عددالمشاهدات: 654</span>
+                                    <p class="marg_01">أصدرتجمععةرعايةالأيتامبمحافظةحفرالباطنتقريرهاالسنويلاعام2024الذييوضح...</p>
+                                    <div class="text-center">
+                                        <a href="#" class="btnbuttonmarg_01">المزيد<c i class="fas fa-angle-left"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="numbgLineartext-center">01<span>جمادى</span></div>
+                                    <a href="#">
+                                        <imgsrc="https://placehold.co/300x200/f39c12/ffffff?text=تقرير+سنوي" class="img-responsivearticle-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="summary">
+            <div class="summary-titlebgLinear" style="padding: 40px 0;">
+                <div class="container">
+                    <div class="col-md-6">
+                        <div>
+                            <h1 class="Text_colorlight"><strong>برامجنا</strong>التعليمية</h1>
+                        </div>
+                        <p class="Text_colorlightText_Sec_1">برامجمتكاملةلرعايةالأيتامتعليمياًوتنميةمهاراتهم</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="article-boxtext-center">
+                            <imgsrc="https://placehold.co/300x200/207cca/ffffff?text=الدعم+الدراسي" class="img-responsive" style="margin: 20px auto;">
+                                <h3 class="Text_colorblue">الدعمالدراسي</h3>
+                                <p>تقديمالدعمالدراسيوالمتابعةالأكاديميةللطلابوالطالباتفيجميعالمراحلالتعليمية</p>
+                                <a href="#" class="btnbutton">تفاصيلالبرنامج</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="article-boxtext-center">
+                            <imgsrc="https://placehold.co/300x200/e74c3c/ffffff?text=تنمية+المهارات" class="img-responsive" style="margin: 20px auto;">
+                                <h3class="Text_colorblue">تنميةالمهارات</h3>
+                                    <p>ورشعملودوراتلتنميةالمهاراتالحياتيةوالمهنيةللشبابمنالأيتام</p>
+                                    <a href="#" class="btnbutton">تفاصيلالبرنامج</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="article-boxtext-center">
+                            <imgsrc="https://placehold.co/300x200/27ae60/ffffff?text=الابتعاث+الجامعي" class="img-responsive" style="margin: 20px auto;">
+                                <h3class="Text_colorblue">الابتعاثالجامعي</h3>
+                                    <p>رعايةالطلابوالطالباتالمتميزينفيالمرحلةالجامعيةوتقديمتوفيرلتحقيقطموحاتهم</p>
+                                    <a href="#" class="btnbutton">تفاصيلالبرنامج</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="donations" class="storebgLinear" style="padding: 60px 0;color: white;">
+            <div class="container">
+                <div class="col-md-6">
+                    <div>
+                        <h1><strong>ساهم</strong>معنا</h1>
+                    </div>
+                    <p class="Text_Sec_1marg_01">بإمكانكدعمجمععةرعايةالأيتامبمحافظةحفرالباطنمنخلالةالتبرعاتالتيتساعدنافيتقديمأفضلالخدماتلأبنائناالأيتام</p>
+                    <div class="rowmarg_02">
+                        <div class="col-md-6">
+                            <div class="article-box" style="background: rgba(255,255,255,0.1);border: 1px solid rgba(255,255,255,0.2);padding: 20px;">
+                                <h4>تبرعمالي</h4>
+                                <p>تبرعكالمالييساعدنافيتقديمأفضلالخدماتلأبنائناالأيتاموتحسينوثاحتاجاتهمالأساسيةوالتعليمية</p>
+                                <a href="#" class="btnbutton" style="background: white;colum: #207cca;">تبرعالآن</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="article-box" style="background: rgba(255,255,255,0.1);border: 1px solid rgba(255,255,255,0.2);padding: 20px;">
+                                <h4>تبرععيني</h4>
+                                <p>تبرعكبعضالموادالغذائية،ملابس،أثاث،أوأيمستلزمتيساعدفيتحسينيبيئةالأيتام</p>
+                                <a href="#" class="btnbutton" style="background: white;colum: #207cca;">تفاصيلالتبرع</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="article-box">
+                        <h3class="Text_colorblue">طرقالتبرع</h3>
+                            <divclass="row">
+                                <divclass="col-md-6">
+                                    <divstyle="margin: 20px 0;padding: 15px;background: #f8f9fa;border-radius: 10px;">
+                                        <h4><i class="fas fa-university" style="color: #207cca;"></i>التحويلالبنكي</h4>
+                                        <p>البنكالأهلي<br>SA45 1000 0000 0000 0000 0000</p>
+                    </div>
+                </div>
+                <divclass="col-md-6">
+                    <divstyle="margin: 20px 0;padding: 15px;background: #f8f9fa;border-radius: 10px;">
+                        <h4><i class="fas fa-mobile-alt" style="color: #207cca;"></i>الرسائلالنصية</h4>
+                        <p>أرسلرسالةنصيةبكلمة"تبرع"إلى5555<br>50ريالشهريا</p>
+            </div>
+    </div>
+    </div>
+    <divstyle="margin-top: 20px;padding: 20px;background: #e6f2ff;border-radius: 10px;">
+        <h4><i class="fas fa-hand-holding-heart" style="color: #207cca;"></i>لماذالتبرع؟</h4>
+        <p>تبرعكيساعدنافيتوفيربيئةآمنةومستقرةلأبنائناالأيتام،ويدعمهمالمسيرةالتعليميةوالمهنية،ويساعدهمفيبناءجيلمتكاملقدربالعطاءوالمشاركةالفعالةفيالمجتمع.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+        </div>
+
+        <footer id="footer">
+            <div class="containermarg_04">
+                <div class="text-center">
+                    <div class="logoBox">
+                        <a href="#">
+                            <imgsrc="https://placehold.co/140x60/207cca/ffffff?text=تراؤف" class="img-responsivecenter-block-block">
+                        </a>
+                    </div>
+                    <div class="footermenuflex_centermarg_04">
+                        <ul class="navnavbar-nav">
+                            <li><a href="#" target="_blank"><i class="fas fa-circle"></i>جمععةرعايةالأيتام</a></li>
+                            <li><a href="#" target="_blank"><i class="fas fa-circle"></i>عنالمبادرة</a></li>
+                            <li><a href="#" target="_blank"><i class="fas fa-circle"></i>الأسئلةالشائعة</a></li>
+                        </ul>
+                    </div>
+                    <div class="rowcontact  ">
+                        <divclass="col-md-4"><span class="footer-contactssc-iconcolor-01"><i class="fas fa-envelope"></i></span>
+                            <div class="textcontact">
+                                <p class="contact-2"><span class="new-line-span">تواصلمعناعبرالبريد</span><br><span class="contact-light">info@traof.org</span></p>
+                            </div>
+                    </div>
+                    <divclass="col-md-4"><span class="footer-contactssc-iconcolor-02"><i class="fas fa-map-marker-alt"></i></span>
+                        <div class="textcontact">
+                            <p class="contact-2"><span class="new-line-span">حفرالباطن،المملكةالعربيةالسعودية</span><br><span class="contact-light">الحيالدبلوماسي،شارعالملكفهد</span></p>
+                        </div>
+                </div>
+                <div class="col-md-4"><span class="footer-contactssc-iconcolor-03"><i class="fas fa-phone"></i></span>
+                    <div class="textcontact">
+                        <p class="contact-1"><span class="new-line-span">اتصلبنا</span><br><span class="contact-light">9200000000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="col-xs-12col-md-4padd_Top_01social">
+                    <ul class="navnavbar-navpull-leftsoscial-media">
+                        <li class="sub-link"><a target="_blank" href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li class="sub-link"><a target="_blank" href="#"><i class="fab fa-telegram"></i></a></li>
+                        <li class="sub-link"><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="sub-link"><a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="sub-link"><a target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12col-md-4thought">
+                    <p style="margin-top: 5px; color: #207cca;">جمععةرعايةالأيتامبمحافظةحفرالباطن | منصةتراؤفالمعرفية © 2025</p>
+                </div>
+                <div class="col-xs-12col-md-4padd_Top_01">
+                    <p>جميعالحقوقمحفوظةلجمععةرعايةالأيتامبمحافظةحفرالباطن</p>
+                </div>
+            </div>
+            </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jqueryery.com/jquery-3.6.0.min.js"></script>
+        <scriptsrc="https://cdn.jsdelivrn.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js">
+            </script>
+            <script>
+                $(document).ready(function() {
+                    // Filterfunctionality
+                    $('.filter-itemsli').click(function() {
+                        $('.filter-itemsli').removeClass('active-filter');
+                        $(this).addClass('active-filter');
+                    });
+
+                    //Smoothscrollingforanchorlinks
+                    $('ahref*"#").on('
+                        click ',function(e){
+                        e.preventDefault(); $('html,body').animate({
+                            scrollTop: $($(this).attr('href')).offset().top
+                        }, 500, 'swing');
+                    });
+
+                //Backto top button
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > 100) {
+                        $('#myBtn').fadeIn();
+                    } else {
+                        $('#myBtn').fadeOut();
+                    }
+                });
+                });
+            </script>
+</body>
+
+</html>
